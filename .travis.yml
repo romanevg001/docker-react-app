@@ -3,6 +3,6 @@ services:
   - docker
 
 berore_install:
-  - docker build -f Dockerfile.dev -t jbt .
+  - docker build -f Dockerfile.dev -t ndonova/jbt .
 scripts:
-  - docker run jbt CI=true npm run test
+  - docker run ndonova/jbt CI=true npm run test
