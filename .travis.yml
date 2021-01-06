@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+
+berore_install:
+  - docker build -f Dockerfile.dev -t InnerTagOfApp .
+scripts:
+  - docker run InnerTagOfApp npm run test -- --covarage
