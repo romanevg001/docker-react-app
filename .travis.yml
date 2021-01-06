@@ -5,4 +5,4 @@ services:
 berore_install:
   - docker build -f Dockerfile.dev -t jbt .
 scripts:
-  - docker run jbt npm run test -- --coverage
+  - docker run jbt CI=true npm run test
