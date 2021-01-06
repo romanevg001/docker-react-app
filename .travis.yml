@@ -3,6 +3,6 @@ services:
   - docker
 
 berore_install:
-  - docker build -f Dockerfile.dev -t ndonova/test-docker-react-app .
+  - docker build -f Dockerfile.dev -t ndonova/jbt .
 scripts:
-  - docker run ndonova/test-docker-react-app npm run test -- --covarage
+  - docker run ndonova/jbt npm run test -- --covarage
