@@ -6,3 +6,15 @@ berore_install:
   - docker build -f Dockerfile.dev -t ndonova/jbt .
 scripts:
   - docker run ndonova/jbt npm run test -- --coverage
+deploy:
+  provider: elasticbeanstalk
+  region: "take it in link for examle: Docker-env.wertyukjhv.us-west-2.elasticbeanstalk.com it will be us-west-2"
+  app: "name app in elasticbeanstalk"
+  env: "Docker-env"
+  bucket_name: "Go to menu Services > S3 and find the name elasticbeanstalk-us-west-2-547765764343"
+  bucket_path: "equal app name in this file"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
